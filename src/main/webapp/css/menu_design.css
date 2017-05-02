@@ -1,0 +1,31 @@
+#menu ul{
+margin: 0;
+padding: 0;
+list-style: none;
+}
+#menu li{
+display: inline;
+padding: 0;
+margin: 0;
+float: left;
+}
+#menu li a{
+display: block;
+width: 100px;
+/*padding: 3px;*/
+padding: 5px;
+/*margin: 10px 0px 10px 0px;*/
+margin: 0px 0px 10px 0px;
+text-decoration: none;
+border:outset 3px #C2CBBD;
+background-color: #C2CBBD;
+text-align: center;
+color: #000000;
+font-size: 14px;
+}
+#menu li a:hover{
+border: inset 3px #95A38D;
+background-color: #95A38D;
+}
+
+

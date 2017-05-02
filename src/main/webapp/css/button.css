@@ -1,0 +1,59 @@
+/*ボタンの中の文字デザインを設定する */
+.button.color{
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0,0,0,.2);
+  background-image: linear-gradient(top, rgba(255,255,255,.3),
+                     rgba(255,255,255,0)),
+                    url(data:image/png;base64,iVBORw0KGg[...]QmCC);
+}
+
+/*緑色のボタンのデザイン設定*/
+.button.green{
+  background-color: #57a957;
+  border-color: #57a957;
+  /*ボタンの余白を設定する*/
+  padding: 10px 50px;
+}
+
+/*緑色のボタンにマウスカーソルを当てた時の変化*/
+.button.green:hover{
+  background-color: #62c462;
+}
+
+/*緑色ボタン クリック時のボタン設定(クリック)*/
+.button.green:active{
+  background: #57a957;
+}
+
+.button.red{
+  background-color: #c43c35;
+  border-color: #c43c35;
+  /*ボタンの余白を設定する*/
+  padding: 10px 50px;
+}
+
+.button.red:hover{
+  background-color: #ee5f5b;
+}
+
+.button.red:active{
+  background: #c43c35;
+}
+
+.button_wrapper{
+   text-align:bottom;
+}
+
+.txt_center{
+width:200px;
+text-align:center;
+}
+
+/*
+	赤いボタンを呼び出す
+	<button class="color red button">Button</button>
+	緑のボタンを呼び出す
+	<button class="color green button">Button</button>
+	青いボタンを呼び出す
+	<button class="color blue button">Button</button>
+*/

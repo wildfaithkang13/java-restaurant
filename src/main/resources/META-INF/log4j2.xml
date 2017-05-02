@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration>
+
+<configuration status="OFF">
+
+<Properties>
+	<Property name="error_daily_log">logs/app_error_%d{yyyy-MM-dd HH:mm:ss.SSS}</Property>
+</Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{DEFAULT} | [%t] | %-5level | %c{36} | %msg%n"/>
+        </Console>
+        <!-- output file is /Applications/Eclipse_4.6.2.app/Contents/MacOS/-->
+        <File name="File" fileName="logs/normal_app.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} | [%t] | %-5level | %c{36} | %msg%n"/>
+        </File>
+        	<RollingFile name="RollingFile" fileName="logs/app.log" filePattern="logs/app_%date{yyyyMMddHHmmss}.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} | [%t] | %-5level | %c{36} | %msg%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="File" />
+            <AppenderRef ref="RollingFile" />
+        </Root>
+        <!-- Logger name is project package name-->
+        <Logger name="resistration" level="trace" additivity="false">
+            <AppenderRef ref="Console"/>
+            <!--<AppenderRef ref="File" />-->
+            <AppenderRef ref="RollingFile" />
+        </Logger>
+    </Loggers>
+</configuration>

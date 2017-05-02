@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="css/image_width.css" rel="stylesheet" type="text/css"
+	media="screen" />
+<link href="css/button.css" rel="stylesheet" type="text/css"
+	media="screen" />
+
+<script type="text/javascript">
+	function exec(){
+		location.href = "http://localhost:8080/java-rastaurant/ResistrationServlet?process_name=DecidedResistration";
+	}
+</script>
+<title>いらっしゃいませ！</title>
+</head>
+<body>
+
+	<h1 align="center">ようこそJavaレストランへ！</h1>
+	<marquee>当店は会員制のレストランです。お客様一人一人に最高のサービスを提供いたします。</marquee>
+	<div class="button_wrapper">
+	<!--<span style="position:absolute; bottom:10%;width:20%; left:30%;">
+	<button class="color red button">会員登録</button>
+	</span>
+
+	<span style="position:absolute; bottom:10%;width:20%; right:25%;">
+	<button class="color green button" onclick="location.href='http://localhost:8080/restaurant/Registration.html'">ログイン</button>
+	</span>-->
+
+	<table border="1">
+ 	<tr><th>会員登録がまだの方</th><th>会員登録済みの方</th></tr>
+ 	<tr><td>
+ 	<!-- <button class="color red button" onclick="location.href='http://localhost:8080/rastaurant-maven/ResistrationServlet?process_status=test'">会員登録</button>-->
+ 	<button class="color red button" onclick="exec()">会員登録</button>
+ 	</td>
+ 	<td>
+ 	<button class="color green button" onclick="location.href='http://localhost:8080/java-rastaurant/LoginPage.html'">ログイン</button>
+ 	</td></tr>
+	</table>
+	</div>
+	<!--#echo var = "REMOTE_ADDR" -->
+
+</body>
+</html>

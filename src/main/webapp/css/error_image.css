@@ -1,0 +1,9 @@
+html {
+  min-height: 100%;
+  background-size: cover; /*ボックス全体をカバーする大きさで表示*/
+  background-image: url("../image/warning.png");
+  background-repeat: no-repeat;
+  background-color:		rgba(255,255,255,0.5);
+  background-position: center bottom;/*写真の見せたい場所を調整*/
+
+}
