@@ -15,7 +15,11 @@
             <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} | [%t] | %-5level | %c{36} | %msg%n"/>
         </File>
         	<RollingFile name="RollingFile" fileName="logs/app.log" filePattern="logs/app_%date{yyyyMMddHHmmss}.log">
-            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} | [%t] | %-5level | %c{36} | %msg%n"/>
+        	<!-- ログに出力されるパターン(以下はパイプ区切りで左から「時刻 | ログを生成したスレッド名 | ログレベル | クラス名 | エラーメッセージと出力される)-->
+            <!--<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} | [%t] | %-5level | %c{36} | %msg%n"/>-->
+            <!--<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %msg %C.%M(%F:%L)"/>-->
+            <!--<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %msg %l%n"/>-->
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %msg%n"/>
             <Policies>
                 <TimeBasedTriggeringPolicy />
             </Policies>
@@ -27,7 +31,7 @@
             <AppenderRef ref="RollingFile" />
         </Root>
         <!-- Logger name is project package name-->
-        <Logger name="resistration" level="trace" additivity="false">
+        <Logger name="registration.servlet" level="debug" additivity="false">
             <AppenderRef ref="Console"/>
             <!--<AppenderRef ref="File" />-->
             <AppenderRef ref="RollingFile" />

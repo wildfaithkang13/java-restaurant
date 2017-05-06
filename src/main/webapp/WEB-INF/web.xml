@@ -4,4 +4,21 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>RegistrationServlet</servlet-name>
+  	<display-name>RegistrationServlet</display-name>
+  	<description></description>
+  	<servlet-class>registration.servlet.RegistrationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RegistrationServlet</servlet-name>
+  	<url-pattern>/RegistrationServlet</url-pattern>
+  </servlet-mapping>
+	<!-- エラーページの設定-->
+    <error-page>
+		<exception-type>util.exception.UnexpectedProcessingException</exception-type>
+		<!-- webapp配下からパス指定すること-->
+  		<location>/error_page/UnexpectedException.html</location>
+    </error-page>
+
 </web-app>
